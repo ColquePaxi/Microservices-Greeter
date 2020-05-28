@@ -35,21 +35,21 @@ Estar a fim de conhecer o framework Moleculer:
 
 ## Integração do projeto com o servidor NATS (branch: feature/nats)
 ---
-- [ ] $ cd example
-- [ ] Edite o arquivo moleculer.config.js e altere o valor de transporter assim como segue: 
+- [x] $ cd example
+- [x] Edite o arquivo moleculer.config.js e altere o valor de transporter assim como segue: 
   transporter: "NATS", //null, 
-- [ ] Salve o arquivo e feche
-- [ ] Subir o dashboard do projeto: $ npm run dev
+- [x] Salve o arquivo e feche
+- [x] Subir o dashboard do projeto: $ npm run dev
 
 Observação: parece brincadeira, mas muita gente não avança nos estudos desse framework porque se esquece desse pequeno (porém imprescindível) procedimento.
 
 ## Verificação do ambiente de desenvolvimento 
 ---
 Vá até o browser e:
-  - [ ] Digite: localhost:3000
-  - [ ] Navegue por todos os links da página (dashboard)
-  - [ ] http://localhost:3000/api/greeter/hello (OK)
-  - [ ] http://localhost:3000/api/greeter/welcome?name=Colque (OK)
+  - [x] Digite: localhost:3000
+  - [x] Navegue por todos os links da página (dashboard)
+  - [x] http://localhost:3000/api/greeter/hello (OK)
+  - [x] http://localhost:3000/api/greeter/welcome?name=Colque (OK)
 
 ## Release da versão 1.0.0
 ---
