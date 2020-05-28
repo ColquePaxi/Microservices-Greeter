@@ -53,7 +53,7 @@ Vá até o browser e:
 
 ## Release da versão 1.0.0
 ---
-- [ ] Gerada a TAG v.1.0.0
+- [x] Gerada a TAG 1.0.0
 
 ## Hora de codar o microsserviço
 ---
