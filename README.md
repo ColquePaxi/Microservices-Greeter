@@ -19,41 +19,41 @@ Estar a fim de conhecer o framework Moleculer:
 
 ## Criação do projeto (branch: feature/scaffold)
 ---
-- [ ] $ moleculer init project example
+- [x] $ moleculer init project example
 - Responda as perguntas assim:
-  - [ ] ? Add API Gateway (moleculer-web) service? Yes
-  - [ ] ? Would you like to communicate with other nodes? Yes
-  - [ ] ? Select a transporter NATS (recommended)
-  - [ ] ? Would you like to use cache? No
-  - [ ] ? Add DB sample service? No
-  - [ ] ? Would you like to enable metrics? Yes
-  - [ ] ? Would you like to enable tracing? Yes
-  - [ ] ? Add Docker & Kubernetes sample files? Yes
-  - [ ] ? Use ESLint to lint your code? No
+  - [x] ? Add API Gateway (moleculer-web) service? Yes
+  - [x] ? Would you like to communicate with other nodes? Yes
+  - [x] ? Select a transporter NATS (recommended)
+  - [x] ? Would you like to use cache? No
+  - [x] ? Add DB sample service? No
+  - [x] ? Would you like to enable metrics? Yes
+  - [x] ? Would you like to enable tracing? Yes
+  - [x] ? Add Docker & Kubernetes sample files? Yes
+  - [x] ? Use ESLint to lint your code? No
     Create 'example' folder...
-  - [ ] ? Would you like to run 'npm install'? (Y/n) Y
+  - [x] ? Would you like to run 'npm install'? (Y/n) Y
 
 ## Integração do projeto com o servidor NATS (branch: feature/nats)
 ---
-- [ ] $ cd example
-- [ ] Edite o arquivo moleculer.config.js e altere o valor de transporter assim como segue: 
+- [x] $ cd example
+- [x] Edite o arquivo moleculer.config.js e altere o valor de transporter assim como segue: 
   transporter: "NATS", //null, 
-- [ ] Salve o arquivo e feche
-- [ ] Subir o dashboard do projeto: $ npm run dev
+- [x] Salve o arquivo e feche
+- [x] Subir o dashboard do projeto: $ npm run dev
 
 Observação: parece brincadeira, mas muita gente não avança nos estudos desse framework porque se esquece desse pequeno (porém imprescindível) procedimento.
 
 ## Verificação do ambiente de desenvolvimento 
 ---
 Vá até o browser e:
-  - [ ] Digite: localhost:3000
-  - [ ] Navegue por todos os links da página (dashboard)
-  - [ ] http://localhost:3000/api/greeter/hello (OK)
-  - [ ] http://localhost:3000/api/greeter/welcome?name=Colque (OK)
+  - [x] Digite: localhost:3000
+  - [x] Navegue por todos os links da página (dashboard)
+  - [x] http://localhost:3000/api/greeter/hello (OK)
+  - [x] http://localhost:3000/api/greeter/welcome?name=Colque (OK)
 
 ## Release da versão 1.0.0
 ---
-- [ ] Gerada a TAG v.1.0.0
+- [x] Gerada a TAG 1.0.0
 
 ## Hora de codar o microsserviço
 ---
