@@ -19,19 +19,19 @@ Estar a fim de conhecer o framework Moleculer:
 
 ## Criação do projeto (branch: feature/scaffold)
 ---
-- [ ] $ moleculer init project example
+- [x] $ moleculer init project example
 - Responda as perguntas assim:
-  - [ ] ? Add API Gateway (moleculer-web) service? Yes
-  - [ ] ? Would you like to communicate with other nodes? Yes
-  - [ ] ? Select a transporter NATS (recommended)
-  - [ ] ? Would you like to use cache? No
-  - [ ] ? Add DB sample service? No
-  - [ ] ? Would you like to enable metrics? Yes
-  - [ ] ? Would you like to enable tracing? Yes
-  - [ ] ? Add Docker & Kubernetes sample files? Yes
-  - [ ] ? Use ESLint to lint your code? No
+  - [x] ? Add API Gateway (moleculer-web) service? Yes
+  - [x] ? Would you like to communicate with other nodes? Yes
+  - [x] ? Select a transporter NATS (recommended)
+  - [x] ? Would you like to use cache? No
+  - [x] ? Add DB sample service? No
+  - [x] ? Would you like to enable metrics? Yes
+  - [x] ? Would you like to enable tracing? Yes
+  - [x] ? Add Docker & Kubernetes sample files? Yes
+  - [x] ? Use ESLint to lint your code? No
     Create 'example' folder...
-  - [ ] ? Would you like to run 'npm install'? (Y/n) Y
+  - [x] ? Would you like to run 'npm install'? (Y/n) Y
 
 ## Integração do projeto com o servidor NATS (branch: feature/nats)
 ---
