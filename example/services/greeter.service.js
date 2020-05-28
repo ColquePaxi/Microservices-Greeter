@@ -35,7 +35,7 @@ module.exports = {
 				path: "/hello"
 			},
 			async handler() {
-				return "Hello Moleculer";
+				return "Olá Moleculer";
 			}
 		},
 
@@ -51,7 +51,7 @@ module.exports = {
 			},
 			/** @param {Context} ctx  */
 			async handler(ctx) {
-				return `Welcome, ${ctx.params.name}`;
+				return `Bem-vindo(a), ${ctx.params.name}`;
 			}
 		}
 	},
