@@ -58,10 +58,19 @@ Vá até o browser e:
 ## Hora de codar o microsserviço
 ---
 Padrão monolítico (para efeito de desenvolvimento): 
-  - [ ] Traduzir as mensagens dos serviços p/ idioma português (branch: feature/brazuka)
-  - [ ] Criar um novo serviço (helper service) que "conversará" com o greeter service (branch: feature/helper)
-  - [ ] Teste: chamar o novo serviço fora do Browser (isso serve para qualquer outro serviço)
-  - [ ] Emitir um evento por um serviço e escutar através de outro serviço, realizando uma ação (branch: feature/emit)
+  - [x] Traduzir as mensagens dos serviços p/ idioma português (branch: feature/brazuka)
+  - [x] Criar um novo serviço (helper service) que "pegará" um evento emitido pelo serviço greeter.hello (branch: feature/helper)
+  - [x] Registrar o novo serviço
+    Vá no Terminal que está rodando o console, dê enter e no prompt digite: 
+    mol$ load services/helper.service.js
+    Tem que retornar: 
+    a) Loaded successfully! 
+    b) 'helper' service is registered.
+  - [x] Emitir um evento por um serviço e escutar através de outro serviço, realizando uma ação
+    mol$ emit "hello.called" --payload "Hello from Terminal"
+    Tem que retornar:
+    Helper service pegou um evento
+    { payload: 'Hello from Terminal' }
   - [ ] Criar uma ação no helper service que vai interagir com o greeter.hello (branch: feature/action)
   
 Padrão distribuído em containers docker (branch: feature/distributed): 
