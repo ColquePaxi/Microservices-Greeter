@@ -36,8 +36,9 @@ module.exports = {
 			},
 			async handler(ctx) {
 				const payload = `Olá do greeter@${this.broker.nodeID}`;
-				ctx.emit("hello.called", payload);
-				return payload;
+				const number = await ctx.call("helper.random")
+				ctx.emit("hello.called", { payload, number });
+				return { payload, number };
 			}
 		},
 
