@@ -96,6 +96,9 @@ Padrão monolítico (para efeito de desenvolvimento):
     { payload: 'Olá do greeter@lnx-colque-11313', number: 3 }
     Como o número gerado é aleatório, cada vez que aciona o greeter.hello retorna um número diferente.
 
+## Release da versão 1.2.0 (atualizada a master já corrigida pela bugfix 1.1.0)
+- [x] Gerada a TAG 1.2.0
+
 ## Tornando o microsserviço distribuído (deixando de ser monolítico)
 ---
 Padrão distribuído em containers docker (branch: feature/distributed): 
