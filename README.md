@@ -80,10 +80,10 @@ Padrão monolítico (para efeito de desenvolvimento):
       >> Response:
       'Olá do greeter@lnx-colque-20078'
 
-## Release da versão 1.0.1
-- [ ] Gerada a TAG 1.0.1
+## Release da versão 1.1.0
+- [x] Gerada a TAG 1.1.0
   
-## Release da versão 2.0.0
+## Tornando o microsserviço distribuído (deixando de ser monolítico)
 ---
 Padrão distribuído em containers docker (branch: feature/distributed): 
   - [ ] Configurar os containers em rede
@@ -91,6 +91,9 @@ Padrão distribuído em containers docker (branch: feature/distributed):
   - [ ] Teste: chamar o serviço greeter.hello no Browser e verificar se as chamadas estão sendo balanceadas entre containers
 - [x] Gerada a TAG 2.0.0
 
+## Release da versão 2.0.0
+- [x] Gerada a TAG 2.0.0
+  
 ## Considerações Finais
 ---
 Isso que acabamos de implementar é só o começo. Além de codar, uma outra coisa bem importante é identificar o potencial desse tipo de solução para atender demandas de negócio com mais agilidade, flexibilidade, escalabilidade e disponibilidade, quando olhado pelo prisma do engenheiro de software. Questões como segurança serão abordados em novas jornadas. Espero que tenham se divertido também. 
