@@ -58,17 +58,42 @@ Vá até o browser e:
 ## Hora de codar o microsserviço
 ---
 Padrão monolítico (para efeito de desenvolvimento): 
-  - [ ] Traduzir as mensagens dos serviços p/ idioma português (branch: feature/brazuka)
-  - [ ] Criar um novo serviço (helper service) que "conversará" com o greeter service (branch: feature/helper)
-  - [ ] Teste: chamar o novo serviço fora do Browser (isso serve para qualquer outro serviço)
-  - [ ] Emitir um evento por um serviço e escutar através de outro serviço, realizando uma ação (branch: feature/emit)
-  - [ ] Criar uma ação no helper service que vai interagir com o greeter.hello (branch: feature/action)
+  - [x] Traduzir as mensagens dos serviços p/ idioma português (branch: feature/brazuka)
+  - [x] Criar um novo serviço (helper service) que "pegará" um evento emitido pelo serviço greeter.hello (branch: feature/helper)
+  - [x] Registrar o novo serviço
+    Vá no Terminal que está rodando o console, dê enter e no prompt digite: 
+    mol$ load services/helper.service.js
+    Tem que retornar: 
+    a) Loaded successfully! 
+    b) 'helper' service is registered.
+  - [x] Emitir um evento por um serviço e escutar através de outro serviço, realizando uma ação
+    mol$ emit "hello.called" --payload "Hello from Terminal"
+    Tem que retornar:
+    Helper service pegou um evento
+    { payload: 'Hello from Terminal' }
+  - [x] Criar uma ação no service hello que vai **emitir** um aviso que vai ser **escutado** pelo helper service (branch: feature/action)
+  - Testar a solução:
+    - [x] No browser: http://localhost:3000/api/greeter/hello
+    - [x] No console: mol$ call "greeter.hello"
+    Se tudo deu certo, você terá como resposta algo parecido com:
+      >> Execution time:1ms
+      >> Response:
+      'Olá do greeter@lnx-colque-20078'
+
+## Release da versão 1.1.0
+- [x] Gerada a TAG 1.1.0
   
+## Tornando o microsserviço distribuído (deixando de ser monolítico)
+---
 Padrão distribuído em containers docker (branch: feature/distributed): 
   - [ ] Configurar os containers em rede
   - [ ] Criar réplica do Gretter Service
   - [ ] Teste: chamar o serviço greeter.hello no Browser e verificar se as chamadas estão sendo balanceadas entre containers
+- [x] Gerada a TAG 2.0.0
 
+## Release da versão 2.0.0
+- [x] Gerada a TAG 2.0.0
+  
 ## Considerações Finais
 ---
 Isso que acabamos de implementar é só o começo. Além de codar, uma outra coisa bem importante é identificar o potencial desse tipo de solução para atender demandas de negócio com mais agilidade, flexibilidade, escalabilidade e disponibilidade, quando olhado pelo prisma do engenheiro de software. Questões como segurança serão abordados em novas jornadas. Espero que tenham se divertido também. 
