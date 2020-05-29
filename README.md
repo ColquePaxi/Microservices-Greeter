@@ -71,12 +71,25 @@ Padrão monolítico (para efeito de desenvolvimento):
     Tem que retornar:
     Helper service pegou um evento
     { payload: 'Hello from Terminal' }
-  - [ ] Criar uma ação no helper service que vai interagir com o greeter.hello (branch: feature/action)
+  - [x] Criar uma ação no service hello que vai **emitir** um aviso que vai ser **escutado** pelo helper service (branch: feature/action)
+  - Testar a solução:
+    - [x] No browser: http://localhost:3000/api/greeter/hello
+    - [x] No console: mol$ call "greeter.hello"
+    Se tudo deu certo, você terá como resposta algo parecido com:
+      >> Execution time:1ms
+      >> Response:
+      'Olá do greeter@lnx-colque-20078'
+
+## Release da versão 1.0.1
+- [ ] Gerada a TAG 1.0.1
   
+## Release da versão 2.0.0
+---
 Padrão distribuído em containers docker (branch: feature/distributed): 
   - [ ] Configurar os containers em rede
   - [ ] Criar réplica do Gretter Service
   - [ ] Teste: chamar o serviço greeter.hello no Browser e verificar se as chamadas estão sendo balanceadas entre containers
+- [x] Gerada a TAG 2.0.0
 
 ## Considerações Finais
 ---

@@ -34,8 +34,10 @@ module.exports = {
 				method: "GET",
 				path: "/hello"
 			},
-			async handler() {
-				return "Olá Moleculer";
+			async handler(ctx) {
+				const payload = `Olá do greeter@${this.broker.nodeID}`;
+				ctx.emit("hello.called", payload);
+				return payload;
 			}
 		},
 
