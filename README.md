@@ -82,17 +82,33 @@ Padrão monolítico (para efeito de desenvolvimento):
 
 ## Release da versão 1.1.0
 - [x] Gerada a TAG 1.1.0
-  
+
+## Bugfix da versão 1.1.0
+- [x] Gerador de números aleatório no serviço helper que será retornando quando acionado o serviço greeter.hello
+- [x] Transformar o greeter.hello em assíncrono para que seja possível chamar uma action em outro serviço
+  - Testar a solução:
+    - [x] No console: mol$ call "greeter.hello"
+    Se tudo deu certo, você terá como resposta algo parecido com:
+    Helper service pegou um evento
+    { payload: 'Olá do greeter@lnx-colque-11313', number: 5 }
+    - [x] No browser: http://localhost:3000/api/greeter/hello
+    Se tudo deu certo, você terá como resposta algo parecido com:
+    { payload: 'Olá do greeter@lnx-colque-11313', number: 3 }
+    Como o número gerado é aleatório, cada vez que aciona o greeter.hello retorna um número diferente.
+
+## Release da versão 1.2.0 (atualizada a master já corrigida pela bugfix 1.1.0)
+- [x] Gerada a TAG 1.2.0
+
 ## Tornando o microsserviço distribuído (deixando de ser monolítico)
 ---
 Padrão distribuído em containers docker (branch: feature/distributed): 
   - [ ] Configurar os containers em rede
   - [ ] Criar réplica do Gretter Service
   - [ ] Teste: chamar o serviço greeter.hello no Browser e verificar se as chamadas estão sendo balanceadas entre containers
-- [x] Gerada a TAG 2.0.0
+- [ ] Gerada a TAG 2.0.0
 
 ## Release da versão 2.0.0
-- [x] Gerada a TAG 2.0.0
+- [ ] Gerada a TAG 2.0.0
   
 ## Considerações Finais
 ---

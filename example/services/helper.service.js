@@ -8,5 +8,12 @@ module.exports = {
             this.logger.info("Helper service pegou um evento");
             this.logger.info(payload);
         }
+    },
+
+    actions: {
+        random() {
+            return Math.round(Math.random() * 10);
+        }
     }
+
 };
