@@ -117,7 +117,7 @@ Teste: chamar o serviço greeter.hello no Browser e verificar se as chamadas est
   - [x] $ npm run dc:down // Baixar e remover os containers
 
 ## Release da versão 2.0.0
-- [ ] Gerada a TAG 2.0.0
+- [x] Gerada a TAG 2.0.0
   
 ## Considerações Finais
 ---
