@@ -2,7 +2,7 @@
 ---
 [![Moleculer](https://badgen.net/badge/Powered%20by/Moleculer/0e83cd)](https://moleculer.services)
 
-Essa é uma série de treinamento sobre microsserviços (microservices). Além de "codar" o objetivo é validar alguns conceitos de microsserviço frente à essa implementação. Se você está pronto para aprender se divertindo, embarque nessa, seja muito bem-vindo(a). Se você conhece bem os conceitos de microsserviço vá apicando-os aos poucos, gradualmente, ao longo dessa jornada; mas se você é um novato, não se preocupe..., sugiro que vá "codando" e em paralelo vá em busca dos conceitos de microsserviços (isso é muito importante!!!!).
+Essa é uma série de treinamento sobre microsserviços (microservices). Além de "codar" o objetivo é validar alguns conceitos de microsserviço frente à essa implementação. Se você está pronto para aprender se divertindo, embarque nessa, seja muito bem-vindo(a). Se você conhece bem os conceitos de microsserviço vá aplicando-os aos poucos, gradualmente, ao longo dessa jornada; mas se você é um novato, não se preocupe..., sugiro que vá "codando" e em paralelo vá em busca dos conceitos de microsserviços (isso é muito importante!!!!).
 Bora lá, então?
 
 
