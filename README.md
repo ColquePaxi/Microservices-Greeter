@@ -102,16 +102,25 @@ Padrão monolítico (para efeito de desenvolvimento):
 ## Tornando o microsserviço distribuído (deixando de ser monolítico)
 ---
 Padrão distribuído em containers docker (branch: feature/distributed): 
-  - [ ] Configurar os containers em rede
-  - [ ] Criar réplica do Gretter Service
-  - [ ] Teste: chamar o serviço greeter.hello no Browser e verificar se as chamadas estão sendo balanceadas entre containers
-- [ ] Gerada a TAG 2.0.0
+O Moleculer é tão maravilhoso que vocẽ não precisa mudar uma única linha de código dos serviços criados, se quer, para migrar sua aplicação de monolítico para distribuído. Basta somente você fazer tudo funcionar no formato monolítico e depois somente alterar o docker-compose.yaml configurando tudo em containers separados; ou seja, somente um deployment configuration e nada mais. E como mágica, tudo funciona de forma balanceada (claro que graças ao Traefik que já temos integrado ao projeto, neste caso).
+  - [x] Criar réplica do Gretter Service
+  - [x] Incluir o HelperService para subir em container
+  - [x] Parar o serviço: Ctrl + C no console.
+
+Teste: chamar o serviço greeter.hello no Browser e verificar se as chamadas estão sendo balanceadas entre containers:
+  - [x] $ npm run dc:up // Criar e/ou subir os containers
+  - [x] No browser: http://localhost:3000/api/greeter/hello
+  Se tudo deu certo, você terá como resposta algo parecido com:
+  { payload: 'Olá do greeter@lnx-colque-11313', number: 3 }
+  Como o número gerado é aleatório, cada vez que aciona o greeter.hello retorna um número diferente.
+  - [x] Verificado que o número do nodeID (qual container respondeu ao request) está mudando, ou seja, está sendo feito o load balanced.
+  - [x] $ npm run dc:down // Baixar e remover os containers
 
 ## Release da versão 2.0.0
 - [ ] Gerada a TAG 2.0.0
   
 ## Considerações Finais
 ---
-Isso que acabamos de implementar é só o começo. Além de codar, uma outra coisa bem importante é identificar o potencial desse tipo de solução para atender demandas de negócio com mais agilidade, flexibilidade, escalabilidade e disponibilidade, quando olhado pelo prisma do engenheiro de software. Questões como segurança serão abordados em novas jornadas. Espero que tenham se divertido também. 
+Isso que acabamos de implementar é só o começo. Além de codar, uma outra coisa bem importante é identificar o potencial desse tipo de solução para atender demandas de negócio com mais agilidade, flexibilidade, escalabilidade, disponibilidade, confiabilidade e segurança. Isso é que dá sentido ao DevOps para o Negócio. Questões como segurança serão abordados em novas jornadas. Espero que tenham se divertido também. 
 
 ---

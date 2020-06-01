@@ -6,6 +6,7 @@ services:
     build:
       context: .
     image: example
+    container_name: moleculer-demo-api
     env_file: docker-compose.env
     environment:
       SERVICES: api
@@ -23,6 +24,7 @@ services:
     build:
       context: .
     image: example
+    container_name: moleculer-demo-greeter
     env_file: docker-compose.env
     environment:
       SERVICES: greeter
@@ -31,13 +33,41 @@ services:
     networks:
       - internal
 
+  greeterReplica:
+    build:
+      context: .
+    image: example
+    container_name: moleculer-demo-greeter-replica
+    env_file: docker-compose.env
+    environment:
+      SERVICES: greeter
+    depends_on:
+      - nats
+    networks:
+      - internal
+    
+  helperService:
+    build:
+      context: .
+    image: example
+    env_file: docker-compose.env
+    container_name: moleculer-demo-helper
+    environment:
+      SERVICES: helper
+    depends_on:
+      - nats
+    networks:
+      - internal
+    
   nats:
     image: nats:2
+    container_name: moleculer-demo-nats
     networks:
       - internal
 
   traefik:
     image: traefik:v2.1
+    container_name: moleculer-demo-traefik
     command:
       - "--api.insecure=true" # Don't do that in production!
       - "--providers.docker=true"
@@ -55,4 +85,4 @@ networks:
   internal:
 
 volumes:
-  data:
+  moleculer-data:
